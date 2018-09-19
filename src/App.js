@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Character from './Modules/Character.js'
+import Characters from './Modules/Character.js'
 const urls = {
   characters: '//localhost:3000/characters/'
 }
@@ -23,15 +23,9 @@ class App extends Component {
     })
   }
   render() {
-    let CharList;
-    if(this.state.characters !== null) {
-      CharList = this.state.characters.results.map(char => {
-        return <Character name={char.name} key={char.name} />
-      });
-    }
     return (
       <div className="App">
-        {CharList}
+        <Characters characters={this.state.characters ? this.state.characters.results : null} />
       </div>
     )
   }
