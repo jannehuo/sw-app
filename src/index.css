@@ -1,5 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  background: #333333;
+  font-family: 'Roboto', sans-serif;
   font-family: sans-serif;
+  color: #f2f2f2;
+  font-size: 18px;
+}
+
+.App {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.character-card {
+  background-color: #f2f2f2;
+  color: #333333;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+  width: calc(25% - 10px);
 }
